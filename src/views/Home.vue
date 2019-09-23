@@ -13,6 +13,11 @@ export default {
   name: 'home',
   components: {
     HelloWorld
+  },
+  mounted(){
+    this.axios.get('/api/getAccessToken').then((response) => {
+      console.log(response.data)
+    })
   }
 }
 </script>
